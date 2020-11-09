@@ -6,37 +6,38 @@ app.use(express.json());
 const PORT = 8005;
 
 // letra a
-app.get("/", (req, res) => {
+app.get("/", function(req, res) {
   return res.status(200).json("Este endpoint utiliza o verbo GET.");
 });
 
 // letra b
-app.post("/", (req, res) => {
+app.post("/", function(req, res) {
   return res.status(200).json("Este endpoint utiliza o verbo POST.");
 });
 
 // letra c
-app.put("/", (req, res) => {
+app.put("/", function(req, res) {
   return res.status(200).json("Este endpoint utiliza o verbo PUT.");
 });
 
 // letra d
-app.post("/:nome", (req, res) => {
+app.post("/:nome", function(req, res) {
   return res
     .status(200)
     .json(`Este endpoint recebe o nome ${req.params.nome} via URL.`);
 });
 
 // letra e
-app.put("/estudante", (req, res) => {
-    const putReq = req.body;
+app.put("/estudante", function(req, res) {
   return res
     .status(200)
-    .json(`Este endpoint recebe o nome ${putReq.name} via Corpo da Requisição.`);
+    .json(
+      `Este endpoint recebe o nome ${req.body.nome} via Corpo da Requisição.`
+    );
 });
 
 // letra f
-app.delete("/", (req, res) => {
+app.delete("/", function(req, res) {
   return res.status(200).json("Este endpoint utiliza o verbo DELETE.");
 });
 
