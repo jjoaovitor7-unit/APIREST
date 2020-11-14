@@ -6,7 +6,7 @@ As requisições foram feitas utilizando o Insomnia Designer.
 Para iniciar a API:
 <pre>node src/api.js</pre>
 
-## Exemplos (utilizando o Insomnia Designer):
+## Exemplos de uso (utilizando o Insomnia Designer):
 
 Letra A
 <img src="screenshots/letra-a.png" />
