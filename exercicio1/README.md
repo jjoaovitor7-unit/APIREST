@@ -4,7 +4,7 @@
 As requisições foram feitas utilizando o Insomnia Designer.
 
 Para iniciar a API:
-<pre>node src/api.js</pre>
+<pre>node src/server.js</pre>
 
 ## Exemplos de uso (utilizando o Insomnia Designer):
 
