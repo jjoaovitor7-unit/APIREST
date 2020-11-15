@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 app
   .use(express.json())
-  .use(express.static("../public"));
+  .use(express.static("public"));
 
 // porta do servidor
 const PORT = 8005;
