@@ -11,7 +11,7 @@ const LocalDateTime = require("@js-joda/core").LocalDateTime;
 
 // letra a
 app.post("/estudante", function (req, res) {
-  let estudante = new Estudante(req.body.id, req.body.maticula, req.body.nome, LocalDateTime.now());
+  let estudante = new Estudante(req.body.id, req.body.matricula, req.body.nome, LocalDateTime.now());
   if (estudante.nome == "Marcio"){
     return res.status(202).json(true);
   }
@@ -27,7 +27,7 @@ app.get("/home", function (req, res) {
 
 // letra c
 app.put("/estudante", function (req, res) {
-  let estudante = new Estudante(req.body.id, req.body.maticula, req.body.nome, LocalDateTime.now());
+  let estudante = new Estudante(req.body.id, req.body.matricula, req.body.nome, LocalDateTime.now());
   if (estudante.id == null){
     return res.status(406).json(false);
   }
