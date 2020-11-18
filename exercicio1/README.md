@@ -3,8 +3,10 @@
 
 As requisições foram feitas utilizando o Insomnia Designer.
 
-Para iniciar a API:
+Para iniciar o servidor API:
 <pre>node src/server.js</pre>
+
+Obs.: Lembrar de executar `npm install` na raiz do projeto (onde está o `package.json`) antes de executar o servidor da API.
 
 ## Exemplos de uso (utilizando o Insomnia Designer):
 
