@@ -13,7 +13,7 @@ const LocalDateTime = require("@js-joda/core").LocalDateTime;
 app.post("/estudante", function (req, res) {
   let estudante = new Estudante(req.body.id, req.body.matricula, req.body.nome, LocalDateTime.now());
   if (estudante.nome == "Marcio"){
-    return res.status(202).json(true);
+    return res.status(202).json("estudante é Marcio");
   }
   else {
     return res.status(400).json(false);
