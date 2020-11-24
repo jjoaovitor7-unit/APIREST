@@ -17,7 +17,7 @@ const swaggerOptions = {
       servers: ["http://localhost:8005"]
     }
   },
-  apis: ["./exercicio1/src/server.js"],
+  apis: ["./src/server.js"],
 };
 
 const swaggerDocs = swaggerJsDoc(swaggerOptions);
