@@ -9,6 +9,24 @@ const { Client } = require("pg");
 const Cliente = require("./Cliente.js");
 const LocalDateTime = require("@js-joda/core").LocalDateTime;
 
+// swagger
+const swaggerUI = require("swagger-ui-express");
+const swaggerJsDoc = require("swagger-jsdoc");
+const swaggerOptions = {
+  swaggerDefinition: {
+    info: {
+      title: "API Exercício 3",
+      version: '1.0',
+      description: "Informações da API do Exercício 3",
+      servers: ["http://localhost:8005"]
+    }
+  },
+  apis: ["./exercicio3/src/server.js"],
+};
+
+const swaggerDocs = swaggerJsDoc(swaggerOptions);
+app.use('/api-docs', swaggerUI.serve, swaggerUI.setup(swaggerDocs));
+
 // const query = `CREATE TABLE Clientes (
 //                     id INT PRIMARY KEY NOT NULL,
 //                     nome VARCHAR NOT NULL,
@@ -20,6 +38,23 @@ const LocalDateTime = require("@js-joda/core").LocalDateTime;
 
 // const query = `DROP TABLE Clientes;`;
 
+
+/**
+ * @swagger
+ * /cliente:
+ *  post:
+ *    description: Requisição POST na rota /cliente
+ *    responses:
+ *      200:
+ *        description: Dado inserido!
+ *      400:
+ *        description: O dado não foi inserido devido a algum erro no Banco de Dados.
+ *    parameters:
+ *      - cliente: cliente
+ *        description: Dados do Cliente.
+ *        in: body
+ *        required: true
+ */
 
 // letra a
 app.post("/cliente", function (req, res) {
@@ -57,6 +92,16 @@ app.post("/cliente", function (req, res) {
   });
 });
 
+
+/**
+ * @swagger
+ * /clientes/todos:
+ *  get:
+ *    description: Requisição GET na rota /clientes/todos
+ *    responses:
+ *      200:
+ *        description: Retorna os dados inseridos no Banco de Dados!
+ */
 
 // letra b
 app.get("/clientes/todos", async function (req, res) {
