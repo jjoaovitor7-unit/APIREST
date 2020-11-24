@@ -7,3 +7,6 @@ Para iniciar o servidor da API:
 <pre>node src/server.js</pre>
 
 Obs.: Lembrar de executar `npm install` na raiz do projeto (onde está o `package.json`) antes de executar o servidor da API.
+
+Documentação do Swagger:
+http://localhost:8005/api-docs/
