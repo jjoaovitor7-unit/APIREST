@@ -35,7 +35,7 @@ router.get("/visualizarconta", function (req, res) {
   });
 });
 
-router.get("/realizardeposito", function (req, res) {
+router.put("/realizardeposito", function (req, res) {
   let cliente = new Cliente(
     req.body.agencia,
     req.body.conta_corrente,
