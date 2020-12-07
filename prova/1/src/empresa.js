@@ -6,5 +6,4 @@ router.post(
   require("./controllers/empresaController.js").maiorSalario
 );
 
-
 module.exports = router;
