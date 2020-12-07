@@ -1,7 +1,7 @@
 let express = require("express");
 let router = express.Router();
 
-router.get(
+router.post(
   "/maiorsalario",
   require("./controllers/empresaController.js").maiorSalario
 );
