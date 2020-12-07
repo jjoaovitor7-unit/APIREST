@@ -6,7 +6,7 @@ app.use(express.json());
 const PORT = 8005;
 
 let empresa = require("./empresa.js");
-app.use("/empresa", empresa);
+app.use("/funcionario", empresa);
 
 app.listen(PORT, () => {
   console.log(`Servidor rodando em http://localhost:${PORT}`);
